@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/meal_nav_graph"
+    app:startDestination="@id/homeMeal">
+
+    <fragment
+        android:id="@+id/homeMeal"
+        android:name="com.genesis.presenter.fragments.HomeMealFragment"
+        android:label="fragment_home_meal"
+        tools:layout="@layout/fragment_home_meal">
+
+        <action
+            android:id="@+id/action_homeMeal_from_fragment_callCards"
+            app:destination="@id/callCards" />
+        <argument
+            android:name="classe"
+            app:argType="string" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/callCards"
+        android:name="com.genesis.presenter.fragments.AllCardsFragment">
+
+        <action
+            android:id="@+id/action_callCards_from_fragment_infoCard"
+            app:destination="@id/infoCard" />
+        <argument
+            android:name="hearthstone"
+            app:argType="com.debug.domain.model.Hearthstone" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/infoCard"
+        android:name="com.genesis.presenter.fragments.InfoCardFragment"
+        tools:layout="@layout/fragment_card_details">
+
+    </fragment>
+</navigation>
