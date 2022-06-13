@@ -1,5 +1,16 @@
 <resources>
-    <string name="app_name">TheMealDB</string>
+    <string name="app_name">Hearthstone</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name_details_hearthstone">Name</string>
+    <string name="flavor_details_hearthstone">Flavor</string>
+    <string name="set_details_hearthstone">Set</string>
+    <string name="rarity_details_hearthstone">Rarity</string>
+    <string name="attack_details_hearthstone">Attack</string>
+    <string name="description_details_hearthstone">Description</string>
+    <string name="type_details_hearthstone">Type</string>
+    <string name="faction_details_hearthstone">Faction</string>
+    <string name="cost_details_hearthstone">Cost</string>
+    <string name="health_details_hearthstone">Health</string>
+    <string name="no_information">No Information</string>
 </resources>

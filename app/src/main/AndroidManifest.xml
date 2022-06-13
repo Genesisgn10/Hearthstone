@@ -5,14 +5,16 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
+        android:name="com.genesis.HearthstoneApplication"
         android:allowBackup="true"
-        android:name="com.genesis.MealApplication"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.TheMealDB">
-        <activity android:name="com.genesis.presenter.HearthstoneActivity">
+        android:theme="@style/Theme.Hearthstone">
+        <activity
+            android:name="com.genesis.presenter.HearthstoneActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

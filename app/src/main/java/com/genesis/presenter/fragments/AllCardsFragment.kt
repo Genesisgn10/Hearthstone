@@ -6,9 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import com.genesis.extensions.setVisible
 import com.genesis.meals.databinding.FragmentAllCardsBinding
 import com.genesis.presenter.viewmodel.AllCardsViewModel
-import com.genesis.presenter.adapter.HearAdapter
+import com.genesis.presenter.adapter.HearthstoneAdapter
 import com.genesis.presenter.model.HearthstoneUiModel
 import com.genesis.extensions.showLoading
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
@@ -42,6 +43,7 @@ class AllCardsFragment : Fragment() {
         }
 
         viewModel.getCards.observe(viewLifecycleOwner, Observer { list ->
+            binding?.text?.setVisible(list.isEmpty())
             populateAllCards(list)
         })
 
@@ -50,12 +52,15 @@ class AllCardsFragment : Fragment() {
         })
 
         classe?.let { viewModel.getAllCards(classe = it) }
+    }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        binding = null
     }
 
     private fun populateAllCards(hearAdapter: List<HearthstoneUiModel>) {
-        binding?.rvMeals?.adapter = HearAdapter(hearAdapter)
+        binding?.rvMeals?.adapter = HearthstoneAdapter(hearAdapter)
     }
-
 
 }

@@ -1,29 +1,25 @@
 package com.genesis
 
-import com.genesis.data.MealRepository
-import com.genesis.data.MealRepositoryImpl
-import com.genesis.data.api.MealApi
-import com.genesis.domain.GetCategories
-import com.genesis.domain.GetCategoriesUseCase
+import com.genesis.data.HearthstoneRepository
+import com.genesis.data.HearthstoneRepositoryImpl
+import com.genesis.data.api.HearthstoneApi
 import com.genesis.domain.GetHearths
 import com.genesis.domain.GetHearthsUseCase
 import com.genesis.network.Service
 import com.genesis.presenter.viewmodel.AllCardsViewModel
-import com.genesis.presenter.viewmodel.MealViewModel
+import com.genesis.presenter.viewmodel.ClassCardViewModel
 import org.koin.dsl.module
 
 val mealServiceModule = module {
 
-    single { Service().createService(MealApi::class.java) }
+    single { Service().createService(HearthstoneApi::class.java) }
 
-    single<MealRepository> { MealRepositoryImpl(get()) }
+    single<HearthstoneRepository> { HearthstoneRepositoryImpl(get()) }
 
     single<GetHearthsUseCase> { GetHearths(get()) }
 
-    single { MealViewModel(get()) }
+    single { ClassCardViewModel(get()) }
 
     single { AllCardsViewModel(get()) }
-
-    single<GetCategoriesUseCase> { GetCategories(get()) }
 
 }
