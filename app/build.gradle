@@ -31,6 +31,22 @@ android {
         jvmTarget = '1.8'
     }
 
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+
+    sourceSets {
+
+        androidTest {
+            java.srcDirs = ['androidTest/java']
+        }
+        main {
+            java {
+                srcDirs 'src/main/java', 'src/main/java/2', 'src/main/java/com/genesis/domain/teste'
+            }
+        }
+    }
+
     viewBinding {
         enabled = true
     }
@@ -51,12 +67,12 @@ dependencies {
 
     implementation project(":helper:network")
 
+    testImplementation "io.mockk:mockk:1.10.6"
 
     def lifecycle_version = "2.2.0"
 
     // ViewModel
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
-
 
     implementation 'com.github.bumptech.glide:glide:4.13.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.13.0'

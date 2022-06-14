@@ -18,7 +18,7 @@ class HearthstoneRepositoryImpl(
                 infoResponseList.sets
             }
 
-            is Output.Failure -> throw GetCategoriesException()
+            is Output.Failure -> throw GetHearthstoneException()
         }
     }
 
@@ -32,7 +32,7 @@ class HearthstoneRepositoryImpl(
                 }
             }
             is Output.Failure -> {
-                throw GetCategoriesException()
+                throw GetHearthstoneException()
             }
 
         }
@@ -44,4 +44,4 @@ interface HearthstoneRepository {
     suspend fun getIfo(): List<String>
 }
 
-class GetCategoriesException : Exception()
+class GetHearthstoneException : Exception()
