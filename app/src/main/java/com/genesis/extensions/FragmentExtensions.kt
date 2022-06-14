@@ -2,14 +2,10 @@ package com.genesis.extensions
 
 import android.content.Context
 import android.content.Intent
-import android.graphics.Color
 import android.os.Bundle
-import android.util.TypedValue
-import android.view.View
 import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import androidx.annotation.IdRes
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.navigation.NavController
@@ -72,20 +68,6 @@ fun FragmentActivity.setFullscreen(isFullscreen: Boolean) {
         window?.clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN)
 }
 
-fun FragmentActivity.setTransparentStatusBar() {
-    window?.decorView?.systemUiVisibility = (View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
-            or View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-            or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN)
-    window?.statusBarColor = Color.TRANSPARENT
-}
-
-fun Fragment.dpToPx(dp: Int): Int {
-    return TypedValue.applyDimension(
-        TypedValue.COMPLEX_UNIT_DIP,
-        dp.toFloat(),
-        resources.displayMetrics
-    ).toInt()
-}
 
 fun FragmentActivity.showLoading(isToShowLoading: Boolean) {
     if (this is BaseActivity) {
@@ -107,9 +89,4 @@ fun <T> FragmentActivity.goToActivity(target: Class<T>, bundle: Bundle? = null) 
     val intent = Intent(this, target)
     if (bundle != null) intent.putExtras(bundle)
     startActivity(intent)
-}
-
-fun FragmentActivity.setTextBlackStatusBar() {
-    this.window.statusBarColor = ContextCompat.getColor(this, R.color.white)
-    this.window?.decorView?.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
 }

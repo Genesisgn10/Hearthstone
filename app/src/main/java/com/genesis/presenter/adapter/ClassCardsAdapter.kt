@@ -8,22 +8,22 @@ import androidx.recyclerview.widget.RecyclerView
 import com.genesis.meals.R
 import com.genesis.meals.databinding.ItemInfoBinding
 
-class InfoAdapter(
+class ClassCardsAdapter(
     private val sets: List<String>
-) : RecyclerView.Adapter<InfoAdapter.SetsViewHolder>() {
+) : RecyclerView.Adapter<ClassCardsAdapter.ClassViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SetsViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ClassViewHolder {
         val view = ItemInfoBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return SetsViewHolder(view)
+        return ClassViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: SetsViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ClassViewHolder, position: Int) {
         val sets = sets[position]
         with(holder) {
-            binding.textTitle.text = sets.toString()
+            binding.textTitle.text = sets
             //binding.textDescription.text = hearthstone.description
-            binding.imageIcon.setBackgroundResource(R.drawable.icon)
-            val bundle = bundleOf("classe" to sets.toString())
+            binding.imageIcon.setBackgroundResource(R.drawable.ic_generic)
+            val bundle = bundleOf("classe" to sets)
             binding.card.setOnClickListener { view ->
                 view.findNavController().navigate(R.id.callCards, bundle)
             }
@@ -33,6 +33,6 @@ class InfoAdapter(
 
     override fun getItemCount() = sets.size
 
-    inner class SetsViewHolder(val binding: ItemInfoBinding) :
+    inner class ClassViewHolder(val binding: ItemInfoBinding) :
         RecyclerView.ViewHolder(binding.root)
 }

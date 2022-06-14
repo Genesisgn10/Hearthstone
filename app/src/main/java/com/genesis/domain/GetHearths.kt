@@ -1,26 +1,26 @@
 package com.genesis.domain
 
-import com.genesis.data.MealRepository
+import com.genesis.data.HearthstoneRepository
 import com.genesis.domain.model.Hearthstone
 
 class GetHearths(
-    private val mealRepository: MealRepository
+    private val hearthstoneRepository: HearthstoneRepository
 ) : GetHearthsUseCase {
 
     override suspend fun invokeInfo(): List<String> = try {
-        mealRepository.getIfo()
+        hearthstoneRepository.getIfo()
     } catch (ex: Exception) {
         listOf()
     }
 
-    override suspend fun invoke(infoClass : String): List<Hearthstone> = try {
-        mealRepository.getHearthstone(infoClass)
+    override suspend fun invoke(infoClass: String): List<Hearthstone> = try {
+        hearthstoneRepository.getHearthstone(infoClass)
     } catch (ex: Exception) {
         listOf()
     }
 }
 
 interface GetHearthsUseCase {
-    suspend operator fun invoke(infoClass : String): List<Hearthstone>
+    suspend operator fun invoke(infoClass: String): List<Hearthstone>
     suspend fun invokeInfo(): List<String>
 }

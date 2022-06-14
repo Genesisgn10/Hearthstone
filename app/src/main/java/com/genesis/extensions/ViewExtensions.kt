@@ -9,13 +9,12 @@ fun ImageView.loadingImage(url: String?) {
     Glide
         .with(context)
         .load(url)
-        .placeholder(R.drawable.ic_launcher_background)
+        .placeholder(R.drawable.icon)
         .error(R.drawable.ic_launcher_background)
-        .fallback(R.drawable.ic_launcher_background)
+        .fallback(R.drawable.icon)
         .centerCrop()
         .into(this)
 }
-
 
 fun View.setVisible(isVisible: Boolean) {
     this.visibility = if (isVisible) View.VISIBLE else View.GONE
@@ -32,5 +31,3 @@ fun View.setGone() {
 fun View.setInvisible() {
     this.visibility = View.INVISIBLE
 }
-
-

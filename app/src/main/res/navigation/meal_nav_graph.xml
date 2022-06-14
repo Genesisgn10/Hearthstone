@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeMeal"
-        android:name="com.genesis.presenter.fragments.HomeMealFragment"
+        android:name="com.genesis.presenter.fragments.ClassCardFragment"
         android:label="fragment_home_meal"
         tools:layout="@layout/fragment_home_meal">
 
@@ -27,9 +27,10 @@
         <action
             android:id="@+id/action_callCards_from_fragment_infoCard"
             app:destination="@id/infoCard" />
+
         <argument
-            android:name="hearthstone"
-            app:argType="com.debug.domain.model.Hearthstone" />
+            android:name="hearthsto"
+            app:argType="com.genesis.presenter.model.HearthstoneUiModel" />
 
     </fragment>
 

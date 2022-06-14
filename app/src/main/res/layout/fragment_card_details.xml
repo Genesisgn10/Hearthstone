@@ -15,7 +15,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -23,12 +22,19 @@
             <ImageView
                 android:id="@+id/image_icon"
                 android:layout_width="200dp"
-                android:layout_height="200dp"
+                android:layout_height="277dp"
                 android:layout_marginTop="24dp"
                 android:src="@drawable/icon"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintBottom_toTopOf="@+id/text_title_name"
+                app:layout_constraintTop_toBottomOf="@+id/image_icon" />
 
             <TextView
                 android:id="@+id/text_title_name"
@@ -36,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="24dp"
-                android:text="Name"
+                android:text="@string/name_details_hearthstone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/image_icon"
@@ -58,7 +64,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:text="Flavor"
+                android:text="@string/flavor_details_hearthstone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/text_value_name" />
@@ -78,7 +84,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:text="Set"
+                android:text="@string/set_details_hearthstone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/text_value_effect" />
@@ -98,7 +104,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:text="Rarity"
+                android:text="@string/rarity_details_hearthstone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/text_value_set" />
@@ -110,6 +116,128 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/text_title_rarity"
                 app:layout_constraintTop_toBottomOf="@+id/text_title_rarity"
+                tools:text="Qualquer coisa" />
+
+            <TextView
+                android:id="@+id/text_title_attack"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/attack_details_hearthstone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_value_rarity" />
+
+            <TextView
+                android:id="@+id/text_value_attack"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/text_title_attack"
+                app:layout_constraintTop_toBottomOf="@+id/text_title_attack"
+                tools:text="Qualquer coisa" />
+
+            <TextView
+                android:id="@+id/text_title_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/description_details_hearthstone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_value_attack" />
+
+            <TextView
+                android:id="@+id/text_value_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/text_title_description"
+                app:layout_constraintTop_toBottomOf="@+id/text_title_description"
+                tools:text="Qualquer coisa" />
+
+            <TextView
+                android:id="@+id/text_title_type"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/type_details_hearthstone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_value_description" />
+
+            <TextView
+                android:id="@+id/text_value_type"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/text_title_type"
+                app:layout_constraintTop_toBottomOf="@+id/text_title_type"
+                tools:text="Qualquer coisa" />
+
+            <TextView
+                android:id="@+id/text_title_faction"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/faction_details_hearthstone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_value_type" />
+
+            <TextView
+                android:id="@+id/text_value_faction"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/text_title_faction"
+                app:layout_constraintTop_toBottomOf="@+id/text_title_faction"
+                tools:text="Qualquer coisa" />
+
+            <TextView
+                android:id="@+id/text_title_cost"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/cost_details_hearthstone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_value_faction" />
+
+            <TextView
+                android:id="@+id/text_value_cost"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/text_title_cost"
+                app:layout_constraintTop_toBottomOf="@+id/text_title_cost"
+                tools:text="Qualquer coisa" />
+
+            <TextView
+                android:id="@+id/text_title_health"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/health_details_hearthstone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_value_cost" />
+
+            <TextView
+                android:id="@+id/text_value_health"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/text_title_health"
+                app:layout_constraintTop_toBottomOf="@+id/text_title_health"
                 tools:text="Qualquer coisa" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

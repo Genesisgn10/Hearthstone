@@ -10,9 +10,9 @@ import com.genesis.meals.R
 import com.genesis.meals.databinding.ItemCardBinding
 import com.genesis.presenter.model.HearthstoneUiModel
 
-class HearAdapter(
+class HearthstoneAdapter(
     private val hearthstone: List<HearthstoneUiModel>
-) : RecyclerView.Adapter<HearAdapter.HearViewHolder>() {
+) : RecyclerView.Adapter<HearthstoneAdapter.HearViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HearViewHolder {
         val view = ItemCardBinding.inflate(LayoutInflater.from(parent.context), parent, false)
