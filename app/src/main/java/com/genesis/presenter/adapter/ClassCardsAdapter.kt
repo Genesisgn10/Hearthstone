@@ -21,8 +21,6 @@ class ClassCardsAdapter(
         val sets = sets[position]
         with(holder) {
             binding.textTitle.text = sets
-            //binding.textDescription.text = hearthstone.description
-            binding.imageIcon.setBackgroundResource(R.drawable.ic_generic)
             val bundle = bundleOf("classe" to sets)
             binding.card.setOnClickListener { view ->
                 view.findNavController().navigate(R.id.callCards, bundle)
