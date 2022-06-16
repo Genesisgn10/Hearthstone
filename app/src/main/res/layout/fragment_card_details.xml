@@ -38,6 +38,7 @@
 
             <TextView
                 android:id="@+id/text_title_name"
+                style="@style/Hearthstone.title"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -50,6 +51,7 @@
 
             <TextView
                 android:id="@+id/text_value_name"
+                style="@style/Hearthstone.sub_title"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
@@ -60,6 +62,7 @@
 
             <TextView
                 android:id="@+id/text_title_effect"
+                style="@style/Hearthstone.title"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -71,6 +74,7 @@
 
             <TextView
                 android:id="@+id/text_value_effect"
+                style="@style/Hearthstone.sub_title"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -80,6 +84,7 @@
 
             <TextView
                 android:id="@+id/text_title_set"
+                style="@style/Hearthstone.title"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -91,6 +96,7 @@
 
             <TextView
                 android:id="@+id/text_value_set"
+                style="@style/Hearthstone.sub_title"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -100,6 +106,7 @@
 
             <TextView
                 android:id="@+id/text_title_rarity"
+                style="@style/Hearthstone.title"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -111,6 +118,7 @@
 
             <TextView
                 android:id="@+id/text_value_rarity"
+                style="@style/Hearthstone.sub_title"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -120,6 +128,7 @@
 
             <TextView
                 android:id="@+id/text_title_attack"
+                style="@style/Hearthstone.title"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -131,6 +140,7 @@
 
             <TextView
                 android:id="@+id/text_value_attack"
+                style="@style/Hearthstone.sub_title"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -140,6 +150,7 @@
 
             <TextView
                 android:id="@+id/text_title_description"
+                style="@style/Hearthstone.title"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -151,6 +162,7 @@
 
             <TextView
                 android:id="@+id/text_value_description"
+                style="@style/Hearthstone.sub_title"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -160,6 +172,7 @@
 
             <TextView
                 android:id="@+id/text_title_type"
+                style="@style/Hearthstone.title"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -171,6 +184,7 @@
 
             <TextView
                 android:id="@+id/text_value_type"
+                style="@style/Hearthstone.sub_title"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -180,6 +194,7 @@
 
             <TextView
                 android:id="@+id/text_title_faction"
+                style="@style/Hearthstone.title"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -191,6 +206,7 @@
 
             <TextView
                 android:id="@+id/text_value_faction"
+                style="@style/Hearthstone.sub_title"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -200,6 +216,7 @@
 
             <TextView
                 android:id="@+id/text_title_cost"
+                style="@style/Hearthstone.title"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -211,6 +228,7 @@
 
             <TextView
                 android:id="@+id/text_value_cost"
+                style="@style/Hearthstone.sub_title"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -220,6 +238,7 @@
 
             <TextView
                 android:id="@+id/text_title_health"
+                style="@style/Hearthstone.title"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -231,6 +250,7 @@
 
             <TextView
                 android:id="@+id/text_value_health"
+                style="@style/Hearthstone.sub_title"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="24dp"

@@ -6,10 +6,11 @@
 
     <TextView
         android:id="@+id/textView"
+        style="@style/Hearthstone.title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Selecione uma classe"
+        android:layout_marginTop="20dp"
+        android:text="@string/Select_set_of_cards"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -27,6 +28,5 @@
         app:layout_constraintTop_toBottomOf="@+id/textView"
         tools:itemCount="2"
         tools:listitem="@layout/item_card" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
