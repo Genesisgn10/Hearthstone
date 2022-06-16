@@ -9,9 +9,9 @@ fun ImageView.loadingImage(url: String?) {
     Glide
         .with(context)
         .load(url)
-        .placeholder(R.drawable.icon)
+        .placeholder(R.drawable.ic_launcher_background)
         .error(R.drawable.ic_launcher_background)
-        .fallback(R.drawable.icon)
+        .fallback(R.drawable.ic_launcher_background)
         .centerCrop()
         .into(this)
 }

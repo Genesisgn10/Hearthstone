@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/homeMeal"
-        android:name="com.genesis.presenter.fragments.ClassCardFragment"
+        android:name="com.genesis.presenter.fragments.SetCardFragment"
         android:label="fragment_home_meal"
-        tools:layout="@layout/fragment_home_meal">
+        tools:layout="@layout/fragment_home_hearthstone">
 
         <action
             android:id="@+id/action_homeMeal_from_fragment_callCards"

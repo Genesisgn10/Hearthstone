@@ -13,4 +13,6 @@
     <string name="cost_details_hearthstone">Cost</string>
     <string name="health_details_hearthstone">Health</string>
     <string name="no_information">No Information</string>
+    <string name="Select_set_of_cards">Select a set of cards</string>
+    <string name="there_are_no_elements_associated_with_this_class">There are no elements associated with this class</string>
 </resources>
