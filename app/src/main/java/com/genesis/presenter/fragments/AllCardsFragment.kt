@@ -47,6 +47,7 @@ class AllCardsFragment : Fragment() {
             populateAllCards(list)
         })
 
+
         viewModel.loading.observe(viewLifecycleOwner, Observer { isLoading ->
             activity?.showLoading(isLoading)
         })
