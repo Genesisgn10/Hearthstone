@@ -7,7 +7,7 @@ import com.genesis.domain.GetHearths
 import com.genesis.domain.GetHearthsUseCase
 import com.genesis.network.Service
 import com.genesis.presenter.viewmodel.AllCardsViewModel
-import com.genesis.presenter.viewmodel.ClassCardViewModel
+import com.genesis.presenter.viewmodel.SetCardViewModel
 import org.koin.dsl.module
 
 val mealServiceModule = module {
@@ -18,7 +18,7 @@ val mealServiceModule = module {
 
     single<GetHearthsUseCase> { GetHearths(get()) }
 
-    single { ClassCardViewModel(get()) }
+    single { SetCardViewModel(get()) }
 
     single { AllCardsViewModel(get()) }
 

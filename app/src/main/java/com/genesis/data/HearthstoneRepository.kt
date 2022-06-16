@@ -11,8 +11,7 @@ class HearthstoneRepositoryImpl(
 ) : HearthstoneRepository {
 
     override suspend fun getIfo(): List<String> {
-        val result = service.getInfo().parseResponse()
-        return when (result) {
+        return when (val result = service.getInfo().parseResponse()) {
             is Output.Success -> {
                 val infoResponseList = result.value
                 infoResponseList.sets
@@ -23,8 +22,7 @@ class HearthstoneRepositoryImpl(
     }
 
     override suspend fun getHearthstone(cardClass: String): List<Hearthstone> {
-        val result = service.get(cardClass).parseResponse()
-        return when (result) {
+        return when (val result = service.get(cardClass).parseResponse()) {
             is Output.Success -> {
                 val hearthstoneResponseList = result.value
                 hearthstoneResponseList.map {
