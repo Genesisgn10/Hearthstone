@@ -10,12 +10,12 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.genesis.extensions.showLoading
 import com.genesis.meals.databinding.FragmentHomeMealBinding
 import com.genesis.presenter.adapter.ClassCardsAdapter
-import com.genesis.presenter.viewmodel.ClassCardViewModel
+import com.genesis.presenter.viewmodel.SetCardViewModel
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
-class ClassCardFragment : Fragment() {
+class SetCardFragment : Fragment() {
 
-    private val viewModel: ClassCardViewModel by sharedViewModel()
+    private val viewModel: SetCardViewModel by sharedViewModel()
 
     private var binding: FragmentHomeMealBinding? = null
 
@@ -30,11 +30,11 @@ class ClassCardFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel.getInfo.observe(viewLifecycleOwner, Observer { list ->
+        viewModel.infoLiveData.observe(viewLifecycleOwner, Observer { list ->
             populateHearthstone(list)
         })
 
-        viewModel.loading.observe(viewLifecycleOwner, Observer { isLoadind ->
+        viewModel.loadingLiveDate.observe(viewLifecycleOwner, Observer { isLoadind ->
             activity?.showLoading(isLoadind)
         })
 

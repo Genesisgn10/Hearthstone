@@ -35,6 +35,6 @@ class GetHearthsTest {
         val result = getHearthstone("Teste")
 
         //THEN
-        Assert.assertEquals(result.size, HearthstoneFactory.hearths.size)
+        Assert.assertEquals(result.size, 0)
     }
 }

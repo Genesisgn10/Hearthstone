@@ -42,7 +42,7 @@ class AllCardsFragment : Fragment() {
             classe = bundle.getString("classe")
         }
 
-        viewModel.getCards.observe(viewLifecycleOwner, Observer { list ->
+        viewModel.cardsLiveDate.observe(viewLifecycleOwner, Observer { list ->
             binding?.text?.setVisible(list.isEmpty())
             populateAllCards(list)
         })
