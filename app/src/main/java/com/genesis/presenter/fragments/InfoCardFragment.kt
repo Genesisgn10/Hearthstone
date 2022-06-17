@@ -13,7 +13,6 @@ import com.genesis.presenter.model.HearthstoneUiModel
 class InfoCardFragment : Fragment() {
 
     private var binding: FragmentCardDetailsBinding? = null
-
     private var hearthstone: HearthstoneUiModel? = null
 
     override fun onCreateView(
@@ -28,7 +27,7 @@ class InfoCardFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         arguments?.let { bundle ->
-            hearthstone = bundle.getParcelable("hearthstone")
+            hearthstone = bundle.getParcelable(CHAVE)
         }
         setupUI()
     }
@@ -54,6 +53,10 @@ class InfoCardFragment : Fragment() {
                 imageIcon.loadingImage(this?.img)
             }
         }
+    }
+
+    companion object {
+        val CHAVE = "hearthstone"
     }
 
 }

@@ -3,8 +3,8 @@ package com.genesis.presenter
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.Observer
 import com.genesis.domain.GetHearthsUseCase
-import com.genesis.util.extensios.getOrAwaitValue
 import com.genesis.presenter.viewmodel.SetCardViewModel
+import com.genesis.util.extensios.getOrAwaitValue
 import io.mockk.coEvery
 import io.mockk.mockk
 import kotlinx.coroutines.runBlocking
