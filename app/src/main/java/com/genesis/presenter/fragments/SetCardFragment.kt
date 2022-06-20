@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import com.genesis.extensions.showLoading
-import com.genesis.meals.databinding.FragmentHomeHearthstoneBinding
-import com.genesis.presenter.adapter.ClassCardsAdapter
+import com.genesis.hearthstone.databinding.FragmentHomeHearthstoneBinding
+import com.genesis.presenter.adapter.SetCardsAdapter
 import com.genesis.presenter.viewmodel.SetCardViewModel
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
@@ -43,7 +43,7 @@ class SetCardFragment : Fragment() {
     private fun populateHearthstone(hearAdapter: List<String>) {
         //val layoutManager = GridLayoutManager(context, 2)
         //binding?.rvMeals?.layoutManager = layoutManager
-        binding?.rvMeals?.adapter = ClassCardsAdapter(hearAdapter)
+        binding?.rvMeals?.adapter = SetCardsAdapter(hearAdapter)
     }
 
     override fun onDestroy() {

@@ -1,7 +1,10 @@
 package com.genesis.network
 
+
 import retrofit2.Response
 import java.net.HttpURLConnection
+
+
 
 sealed class Output<out Response> {
     data class Success<Response> (val value : Response): Output<Response>()
@@ -11,7 +14,6 @@ sealed class Output<out Response> {
 fun <R : Any> Response<R>.parseResponse(): Output<R> {
     if (isSuccessful) {
         val body = body()
-
         if (body != null) {
             return Output.Success(body)
         }

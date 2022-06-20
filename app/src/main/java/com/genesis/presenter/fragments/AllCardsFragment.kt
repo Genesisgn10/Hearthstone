@@ -7,20 +7,18 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import com.genesis.extensions.setVisible
-import com.genesis.meals.databinding.FragmentAllCardsBinding
-import com.genesis.presenter.viewmodel.AllCardsViewModel
+import com.genesis.extensions.showLoading
+import com.genesis.hearthstone.databinding.FragmentAllCardsBinding
 import com.genesis.presenter.adapter.HearthstoneAdapter
 import com.genesis.presenter.model.HearthstoneUiModel
-import com.genesis.extensions.showLoading
+import com.genesis.presenter.viewmodel.AllCardsViewModel
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 class AllCardsFragment : Fragment() {
 
     private val viewModel: AllCardsViewModel by sharedViewModel()
-
     private var binding: FragmentAllCardsBinding? = null
-
-    private var classe: String? = null
+    private var setCard: String? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -39,20 +37,22 @@ class AllCardsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         arguments?.let { bundle ->
-            classe = bundle.getString("classe")
+            setCard = bundle.getString(CHAVE)
         }
+        setupUI()
+    }
 
+    private fun setupUI() {
         viewModel.cardsLiveDate.observe(viewLifecycleOwner, Observer { list ->
             binding?.text?.setVisible(list.isEmpty())
             populateAllCards(list)
         })
 
-
         viewModel.loading.observe(viewLifecycleOwner, Observer { isLoading ->
             activity?.showLoading(isLoading)
         })
 
-        classe?.let { viewModel.getAllCards(classe = it) }
+        setCard?.let { viewModel.getAllCards(classe = it) }
     }
 
     override fun onDestroy() {
@@ -61,7 +61,11 @@ class AllCardsFragment : Fragment() {
     }
 
     private fun populateAllCards(hearAdapter: List<HearthstoneUiModel>) {
-        binding?.rvMeals?.adapter = HearthstoneAdapter(hearAdapter)
+        binding?.rvHearthstone?.adapter = HearthstoneAdapter(hearAdapter)
+    }
+
+    companion object {
+        val CHAVE = "set"
     }
 
 }
