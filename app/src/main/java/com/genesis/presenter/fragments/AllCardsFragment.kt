@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import com.genesis.extensions.setVisible
-import com.genesis.meals.databinding.FragmentAllCardsBinding
-import com.genesis.presenter.viewmodel.AllCardsViewModel
+import com.genesis.extensions.showLoading
+import com.genesis.hearthstone.databinding.FragmentAllCardsBinding
 import com.genesis.presenter.adapter.HearthstoneAdapter
 import com.genesis.presenter.model.HearthstoneUiModel
-import com.genesis.extensions.showLoading
+import com.genesis.presenter.viewmodel.AllCardsViewModel
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 class AllCardsFragment : Fragment() {
@@ -61,7 +61,7 @@ class AllCardsFragment : Fragment() {
     }
 
     private fun populateAllCards(hearAdapter: List<HearthstoneUiModel>) {
-        binding?.rvMeals?.adapter = HearthstoneAdapter(hearAdapter)
+        binding?.rvHearthstone?.adapter = HearthstoneAdapter(hearAdapter)
     }
 
     companion object {

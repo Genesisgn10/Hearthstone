@@ -10,7 +10,7 @@ class HearthstoneApplication : Application() {
         super.onCreate()
         startKoin {
             androidContext(this@HearthstoneApplication)
-            modules(listOf(mealServiceModule))
+            modules(listOf(HearthstoneServiceModule))
         }
     }
 }

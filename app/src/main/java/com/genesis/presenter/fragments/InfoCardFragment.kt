@@ -6,8 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.genesis.extensions.loadingImage
-import com.genesis.meals.R
-import com.genesis.meals.databinding.FragmentCardDetailsBinding
+import com.genesis.hearthstone.R
+import com.genesis.hearthstone.databinding.FragmentCardDetailsBinding
 import com.genesis.presenter.model.HearthstoneUiModel
 
 class InfoCardFragment : Fragment() {
@@ -50,7 +50,7 @@ class InfoCardFragment : Fragment() {
                 textValueFaction.text = this?.faction ?: getString(R.string.no_information)
                 textValueHealth.text = this?.health ?: getString(R.string.no_information)
                 textValueType.text = this?.type ?: getString(R.string.no_information)
-                imageIcon.loadingImage(this?.img)
+                imageIcon.loadingImage(this?.img, progress)
             }
         }
     }

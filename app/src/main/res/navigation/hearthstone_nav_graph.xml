@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/meal_nav_graph"
-    app:startDestination="@id/homeMeal">
+    app:startDestination="@id/homeHearthstone">
 
     <fragment
-        android:id="@+id/homeMeal"
+        android:id="@+id/homeHearthstone"
         android:name="com.genesis.presenter.fragments.SetCardFragment"
-        android:label="fragment_home_meal"
+        android:label="fragment_home"
         tools:layout="@layout/fragment_home_hearthstone">
 
         <action

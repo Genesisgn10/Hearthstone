@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import com.genesis.extensions.showLoading
-import com.genesis.meals.databinding.FragmentHomeHearthstoneBinding
+import com.genesis.hearthstone.databinding.FragmentHomeHearthstoneBinding
 import com.genesis.presenter.adapter.SetCardsAdapter
 import com.genesis.presenter.viewmodel.SetCardViewModel
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel

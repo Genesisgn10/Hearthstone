@@ -13,10 +13,6 @@ sealed class Output<out Response> {
 
 fun <R : Any> Response<R>.parseResponse(): Output<R> {
     if (isSuccessful) {
-        body().run {
-         val s =  message()
-            headers()
-        }
         val body = body()
         if (body != null) {
             return Output.Success(body)

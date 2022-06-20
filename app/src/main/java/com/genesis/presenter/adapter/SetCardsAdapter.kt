@@ -5,8 +5,8 @@ import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import com.genesis.meals.R
-import com.genesis.meals.databinding.ItemInfoBinding
+import com.genesis.hearthstone.R
+import com.genesis.hearthstone.databinding.ItemInfoBinding
 
 class SetCardsAdapter(
     private val sets: List<String>

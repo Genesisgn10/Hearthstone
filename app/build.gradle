@@ -50,7 +50,7 @@ android {
     viewBinding {
         enabled = true
     }
-    namespace 'com.genesis.meals'
+    namespace 'com.genesis.hearthstone'
 }
 
 dependencies {

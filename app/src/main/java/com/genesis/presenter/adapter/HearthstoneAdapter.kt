@@ -2,13 +2,13 @@ package com.genesis.presenter.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.os.bundleOf
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
-import com.genesis.extensions.loadingImage
-import com.genesis.meals.R
-import com.genesis.meals.databinding.ItemCardBinding
-import com.genesis.presenter.model.HearthstoneUiModel
 import com.genesis.extensions.findNavController
+import com.genesis.extensions.loadingImage
+import com.genesis.hearthstone.R
+import com.genesis.hearthstone.databinding.ItemCardBinding
+import com.genesis.presenter.model.HearthstoneUiModel
 
 class HearthstoneAdapter(
     private val hearthstone: List<HearthstoneUiModel>
@@ -24,7 +24,9 @@ class HearthstoneAdapter(
         with(holder) {
             binding.run {
                 textTitle.text = hearthstone.name
-                imageIcon.loadingImage(hearthstone.img)
+                progress.isVisible = true
+                textDescription.text = hearthstone.text
+                imageIcon.loadingImage(hearthstone.img, progress)
                 card.setOnClickListener { view ->
                     view.findNavController(R.id.infoCard, CHAVE, hearthstone)
                 }
