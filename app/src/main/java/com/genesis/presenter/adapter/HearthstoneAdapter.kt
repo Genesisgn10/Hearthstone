@@ -2,12 +2,12 @@ package com.genesis.presenter.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.os.bundleOf
-import androidx.navigation.findNavController
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
+import com.genesis.extensions.findNavController
 import com.genesis.extensions.loadingImage
-import com.genesis.meals.R
-import com.genesis.meals.databinding.ItemCardBinding
+import com.genesis.hearthstone.R
+import com.genesis.hearthstone.databinding.ItemCardBinding
 import com.genesis.presenter.model.HearthstoneUiModel
 
 class HearthstoneAdapter(
@@ -24,10 +24,11 @@ class HearthstoneAdapter(
         with(holder) {
             binding.run {
                 textTitle.text = hearthstone.name
-                imageIcon.loadingImage(hearthstone.img)
+                progress.isVisible = true
+                textDescription.text = hearthstone.text
+                imageIcon.loadingImage(hearthstone.img, progress)
                 card.setOnClickListener { view ->
-                    val bundle = bundleOf("hearthstone" to hearthstone)
-                    view.findNavController().navigate(R.id.infoCard, bundle)
+                    view.findNavController(R.id.infoCard, CHAVE, hearthstone)
                 }
             }
         }
@@ -38,4 +39,8 @@ class HearthstoneAdapter(
 
     inner class HearViewHolder(val binding: ItemCardBinding) :
         RecyclerView.ViewHolder(binding.root)
+
+    companion object {
+        val CHAVE = "hearthstone"
+    }
 }

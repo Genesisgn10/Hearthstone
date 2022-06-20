@@ -10,7 +10,7 @@ import com.genesis.presenter.viewmodel.AllCardsViewModel
 import com.genesis.presenter.viewmodel.SetCardViewModel
 import org.koin.dsl.module
 
-val mealServiceModule = module {
+val HearthstoneServiceModule = module {
 
     single { Service().createService(HearthstoneApi::class.java) }
 

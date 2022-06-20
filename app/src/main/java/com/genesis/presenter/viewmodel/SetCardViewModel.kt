@@ -11,8 +11,8 @@ class SetCardViewModel(
     private val getGetHearthsUseCase: GetHearthsUseCase
 ) : ViewModel() {
 
-    private val _infoLiveData = MutableLiveData<List<String>>()
-    val infoLiveData = _infoLiveData as LiveData<List<String>>
+    private val _infoList = MutableLiveData<List<String>>()
+    val infoLiveData = _infoList as LiveData<List<String>>
 
     private val _loadingLiveDate = MutableLiveData<Boolean>()
     val loadingLiveDate = _loadingLiveDate as LiveData<Boolean>
@@ -20,7 +20,7 @@ class SetCardViewModel(
     fun getInfo() {
         viewModelScope.launch {
             val infoList = getGetHearthsUseCase.invokeInfo()
-            _infoLiveData.value = infoList
+            _infoList.value = infoList
             _loadingLiveDate.value = false
         }
     }

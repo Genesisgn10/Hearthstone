@@ -1,10 +1,10 @@
 package com.genesis.presenter
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.genesis.extensions.setVisible
-import com.genesis.meals.databinding.ActivityMainBinding
+import com.genesis.hearthstone.databinding.ActivityMainBinding
 import com.genesis.my_interface.BaseActivity
 
 class HearthstoneActivity : AppCompatActivity(), BaseActivity {
